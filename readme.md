@@ -1,4 +1,4 @@
-#PROJECT ON FREINDS QUIZ
+# PROJECT ON FREINDS QUIZ
 
 This is the CLI app created using REPL.This App helps know how much your friend is awre of yourself.
 
