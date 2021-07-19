@@ -13,6 +13,16 @@ var quiz=[
      answer:'Elijah'
    }
 ]
+var hScore=[
+  {
+    names:"Bob",
+    scores:3
+  },
+  {
+    names:"Don",
+    scores:2
+  }
+]
 var score=0;
 function check(question,answer){
   var uAnswer=readLineSync.question(question);
@@ -30,7 +40,19 @@ function check(question,answer){
     console.log("Wrong");
   }
 }
+var name=readLineSync.question(("May I know Your Name:"));
 for(var i=0;i<quiz.length;i++){
   check(quiz[i].question,quiz[i].answer);
 }
-console.log('Total Score:'+score);
+for(var i=0;i<hScore.length;i++){
+  if(hScore[i].scores <score){
+    hScore[i].names=name;
+    hScore[i].scores=score;
+  }
+}
+console.log("Highest scores:");
+for(var i=0;i<hScore.length;i++){
+  console.log(hScore[i].names+":"+hScore[i].scores);
+}
+console.log("If you are here ping me:aabc@gmail.com");
+console.log(' Your Score:'+score);
