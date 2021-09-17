@@ -4,23 +4,35 @@ var quiz=[
     question:"What is my Favourite Food:",
     answer:"Biryani"
   },
-   {
+  {
      question:"What is my Favourite juice:",
      answer:"Mango"
-   },
-   {
+  },
+  {
      question:"What is my Favourite tvd Character:",
-     answer:'Elijah'
+     answer:"Elijah"
+  },
+  {
+     question:"What is my First Name:",
+     answer:"Klaus"
+  },
+  {
+     question:"What is my favourite Sport:",
+     answer:"Football"
+  },
+  {
+     question:"What do i do in my free time:",
+     answer:"Code"
    }
 ]
 var hScore=[
   {
     names:"Bob",
-    scores:3
+    scores:2
   },
   {
     names:"Don",
-    scores:2
+    scores:4
   }
 ]
 var score=0;
@@ -37,7 +49,7 @@ function check(question,answer){
     else{
       score--;
     }
-    console.log("Wrong");
+    console.log("Wrong,Score reduced");
   }
 }
 var name=readLineSync.question(("May I know Your Name:"));
@@ -48,6 +60,7 @@ for(var i=0;i<hScore.length;i++){
   if(hScore[i].scores <score){
     hScore[i].names=name;
     hScore[i].scores=score;
+    break;
   }
 }
 console.log("Highest scores:");
